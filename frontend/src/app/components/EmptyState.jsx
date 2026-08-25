@@ -1,0 +1,5 @@
+const starters = ['How can I optimize this React component for performance?', 'Design a clean API for a task management app', 'Explain the best approach for caching in Node.js']
+
+export default function EmptyState({ onSelectPrompt }) {
+  return <section className="flex flex-1 flex-col justify-center pb-16"><div className="mb-9 max-w-xl"><p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300">Two minds, one answer</p><h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">What are you working on?</h1><p className="mt-3 max-w-md text-sm leading-6 text-slate-400">Send a problem to the arena. Two models will solve it independently, then a judge will compare their approaches.</p></div><div className="grid max-w-3xl gap-3 sm:grid-cols-3">{starters.map((prompt) => <button key={prompt} type="button" onClick={() => onSelectPrompt(prompt)} className="rounded-lg border border-slate-800 bg-[#111a31] p-4 text-left text-xs leading-5 text-slate-300 hover:border-indigo-400/50 hover:bg-[#151f39]">{prompt}<span className="mt-3 block text-indigo-300">Try it <span aria-hidden="true">-&gt;</span></span></button>)}</div></section>
+}

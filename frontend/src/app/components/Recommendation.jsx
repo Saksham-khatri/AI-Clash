@@ -1,0 +1,6 @@
+import Icon from './Icon'
+
+export default function Recommendation({ recommendation }) {
+  if (!recommendation) return null
+  return <section className="rounded-xl border border-white/15 bg-white/[0.06] px-5 py-5"><div className="flex items-start gap-4"><div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white text-black"><Icon size={17}><path d="m5 12 4 4L19 6" /></Icon></div><div className="min-w-0"><p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/50">Judge recommendation</p><p className="mt-1 text-base font-medium text-white">{recommendation.title}</p><p className="mt-1 text-xs leading-5 text-white/55">{recommendation.detail}</p></div></div><div className="mt-5 grid gap-2 sm:grid-cols-2">{recommendation.scores.map(({ number, score, winner }) => <div key={number} className={`flex items-center justify-between rounded-lg border px-4 py-3 ${winner ? 'border-white/40 bg-white text-black' : 'border-white/10 bg-black/20 text-white/70'}`}><span className="text-xs font-medium">Solution {number}{winner ? ' · winner' : ''}</span><span className="text-lg font-semibold">{score}<span className="text-xs font-normal opacity-50"> / 10</span></span></div>)}</div></section>
+}

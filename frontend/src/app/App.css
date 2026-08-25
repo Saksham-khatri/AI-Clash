@@ -1,0 +1,71 @@
+.markdown-content pre {
+  overflow-x: auto;
+  border: 1px solid #29334d;
+  background: #080f22;
+  padding: 14px;
+  color: #d9e0f2;
+}
+
+.markdown-content code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.86em;
+}
+
+.markdown-content :not(pre) > code {
+  border-radius: 4px;
+  background: #27314b;
+  padding: 2px 5px;
+  color: #b8c9ff;
+}
+
+.markdown-content p {
+  margin: 0 0 12px;
+}
+
+.markdown-content p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: 20px;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  color: #f5f7ff;
+  font-weight: 600;
+}
+
+.markdown-content a {
+  color: #91a8ff;
+}
+
+/* Keep the arena's visual language neutral while retaining the existing layout utilities. */
+.bg-indigo-600 { background-color: #f5f5f5 !important; color: #090909 !important; }
+.hover\:bg-indigo-500:hover { background-color: #d4d4d4 !important; }
+.bg-indigo-500\/20,
+.bg-cyan-400\/15,
+.bg-indigo-500\/30,
+.bg-indigo-400\/15 { background-color: #262626 !important; }
+.text-indigo-300,
+.text-indigo-200,
+.text-indigo-100,
+.text-cyan-200 { color: #f5f5f5 !important; }
+.border-indigo-400\/60,
+.border-indigo-300\/50,
+.border-indigo-400\/50 { border-color: #737373 !important; }
+.bg-\[\#111a31\] { background-color: #161616 !important; }
+.bg-\[\#17213a\] { background-color: #202020 !important; }
+.bg-\[\#080f22\] { background-color: #090909 !important; }
+.border-slate-800\/80,
+.border-slate-700\/80,
+.border-slate-700 { border-color: #303030 !important; }
+.text-slate-100,
+.text-slate-200 { color: #f5f5f5 !important; }
+.text-slate-300 { color: #c4c4c4 !important; }
+.text-slate-400 { color: #999 !important; }
+.text-slate-500,
+.text-slate-600 { color: #737373 !important; }
+.markdown-content a { color: #f5f5f5; }
