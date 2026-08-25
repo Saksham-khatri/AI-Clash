@@ -73,7 +73,7 @@ const messages = activeSession?.messages || []
     setLoading(true)
 
     try {
-      const response = await axios.post('http://localhost:3000/invoke', {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/invoke`, {
         input: problem
       }, {
         timeout: 120000
