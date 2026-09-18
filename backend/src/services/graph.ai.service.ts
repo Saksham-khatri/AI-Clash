@@ -1,7 +1,7 @@
 import { HumanMessage } from "@langchain/core/messages";
 import { StateSchema, MessagesValue,type GraphNode, ReducedValue, StateGraph, START, END } from "@langchain/langgraph";
 import {z} from 'zod'
-import { cohereModel, geminiModel, mistralModel } from "./models.service.js";
+import { cohereModel, geminiModel } from "./models.service.js";
 import {createAgent,providerStrategy} from 'langchain'
 
 const State = new StateSchema({
@@ -18,12 +18,12 @@ const State = new StateSchema({
 
 const solutionNode: GraphNode<typeof State> = async (state) => {
 
-    const[mistralResponse,cohereResponse] = await Promise.all([
-        mistralModel.invoke(state.problem),
+    const[geminiResponse,cohereResponse] = await Promise.all([
+        geminiModel.invoke(state.problem),
         cohereModel.invoke(state.problem)
     ])
   return{
-    solution_1: mistralResponse.text,
+    solution_1: geminiResponse.text,
     solution_2: cohereResponse.text
   }
 };
